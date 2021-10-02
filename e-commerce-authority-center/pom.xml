@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>e-commerce-springcloud</artifactId>
+        <groupId>com.mlr</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>e-commerce-authority-center</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <!-- 模块名及描述信息 -->
+    <!--    授权和鉴权要分开， 因为用户认证成功(登陆或者注册)以后就会用到授权服务, 返回 accessToken 或者 Oauth 但是每一次用户发送到微服务的请求
+     都会用到鉴权, 所以鉴权的逻辑是要写在 common 微服务里面， 用私钥对用户的 payload信息进行加密，返回给前端， 然后每次前端发送请求以后带着
+     accessToken， 用公钥进行解密 accessToken 进行鉴权 -->
+    <name>e-commerce-authority-center</name>
+    <description>授权中心</description>
+
+    <dependencies>
+        <!-- spring cloud alibaba nacos discovery 依赖 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>2.2.3.RELEASE</version>
+        </dependency>
+        <!-- Java Persistence API, ORM 规范 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- MySQL 驱动, 注意, 这个需要与 MySQL 版本对应 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mlr</groupId>
+            <artifactId>e-commerce-mvc-config</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- zipkin = spring-cloud-starter-sleuth + spring-cloud-sleuth-zipkin-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-zipkin</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.kafka</groupId>-->
+        <!--            <artifactId>spring-kafka</artifactId>-->
+        <!--            <version>2.5.0.RELEASE</version>-->
+        <!--        </dependency>-->
+    </dependencies>
+
+    <!--
+      SpringBoot的Maven插件, 能够以Maven的方式为应用提供SpringBoot的支持，可以将
+      SpringBoot应用打包为可执行的jar或war文件, 然后以通常的方式运行SpringBoot应用
+   -->
+    <build>
+        <finalName>${artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.3.2.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,44 @@
+### 创建用户地址信息
+POST 127.0.0.1:9001/mlr/ecommerce-account-service/address/
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJ1c2VySWRcIjoxMixcInVzZXJuYW1lXCI6XCJtYW51QGltb29jLmNvbVwifSIsImp0aSI6ImQ2ZDNjMjRkLWE4NDktNGJjYS04Y2JjLTNjZGUzYjYxNGMyNSIsImV4cCI6MTYzMzE4MzIwMH0.Zcxzrbl00TXnGAtf7JBa4Q-_cVDdHYtoaA_vsMYfJZufMu1YePXT0hx1mAZoQzqJeGkLUdXuzuG2Ita3-PI0XWDV2dF_yBxl1JLThf3jPBqm3AujMtFU0cz9QFAIzjcDbfpm0BdBjuHU3Z1I92GQhvlPt1QdEzn6Y7BwC6xV0eceIvZ7wKvxBXLcVOvANZNfDJ3Hnf746pskE-ACA5VuE1T2qYtRoGwR5TYiJ5_ukxmVbyKlhrq3SaIKsUONZUAInJHkS1mpPZwjMIqsBaie8IJhTYzGdJxTI_x6Xi3uqso_9UQOVN0sBHtYGamy0lJp9t4bAOXL4VTj4b5XQxGKpQ
+
+{
+  "userId": 12,
+  "addressVoList": [
+    {
+      "username": "Qinyi_Imooc",
+      "phone": "16600000001",
+      "province": "上海市",
+      "city": "上海市",
+      "addressDetail": "闵行区"
+    }
+  ]
+}
+
+### 获取当前登录用户地址信息
+GET 127.0.0.1:9001/mlr/ecommerce-account-service/address/
+Accept: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJ1c2VySWRcIjoxMixcInVzZXJuYW1lXCI6XCJtYW51QGltb29jLmNvbVwifSIsImp0aSI6ImQ2ZDNjMjRkLWE4NDktNGJjYS04Y2JjLTNjZGUzYjYxNGMyNSIsImV4cCI6MTYzMzE4MzIwMH0.Zcxzrbl00TXnGAtf7JBa4Q-_cVDdHYtoaA_vsMYfJZufMu1YePXT0hx1mAZoQzqJeGkLUdXuzuG2Ita3-PI0XWDV2dF_yBxl1JLThf3jPBqm3AujMtFU0cz9QFAIzjcDbfpm0BdBjuHU3Z1I92GQhvlPt1QdEzn6Y7BwC6xV0eceIvZ7wKvxBXLcVOvANZNfDJ3Hnf746pskE-ACA5VuE1T2qYtRoGwR5TYiJ5_ukxmVbyKlhrq3SaIKsUONZUAInJHkS1mpPZwjMIqsBaie8IJhTYzGdJxTI_x6Xi3uqso_9UQOVN0sBHtYGamy0lJp9t4bAOXL4VTj4b5XQxGKpQ
+
+### 通过 id 获取用户地址信息, id 是 EcommerceAddress 表的主键
+GET 127.0.0.1:9001/mlr/ecommerce-account-service/address/address-info-by-address-id?id=1
+Accept: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJ1c2VySWRcIjoxMixcInVzZXJuYW1lXCI6XCJtYW51QGltb29jLmNvbVwifSIsImp0aSI6ImQ2ZDNjMjRkLWE4NDktNGJjYS04Y2JjLTNjZGUzYjYxNGMyNSIsImV4cCI6MTYzMzE4MzIwMH0.Zcxzrbl00TXnGAtf7JBa4Q-_cVDdHYtoaA_vsMYfJZufMu1YePXT0hx1mAZoQzqJeGkLUdXuzuG2Ita3-PI0XWDV2dF_yBxl1JLThf3jPBqm3AujMtFU0cz9QFAIzjcDbfpm0BdBjuHU3Z1I92GQhvlPt1QdEzn6Y7BwC6xV0eceIvZ7wKvxBXLcVOvANZNfDJ3Hnf746pskE-ACA5VuE1T2qYtRoGwR5TYiJ5_ukxmVbyKlhrq3SaIKsUONZUAInJHkS1mpPZwjMIqsBaie8IJhTYzGdJxTI_x6Xi3uqso_9UQOVN0sBHtYGamy0lJp9t4bAOXL4VTj4b5XQxGKpQ
+
+### 创建用户地址信息
+POST 127.0.0.1:9001/mlr/ecommerce-account-service/address/address-info-by-table-id
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJ1c2VySWRcIjoxMixcInVzZXJuYW1lXCI6XCJtYW51QGltb29jLmNvbVwifSIsImp0aSI6ImQ2ZDNjMjRkLWE4NDktNGJjYS04Y2JjLTNjZGUzYjYxNGMyNSIsImV4cCI6MTYzMzE4MzIwMH0.Zcxzrbl00TXnGAtf7JBa4Q-_cVDdHYtoaA_vsMYfJZufMu1YePXT0hx1mAZoQzqJeGkLUdXuzuG2Ita3-PI0XWDV2dF_yBxl1JLThf3jPBqm3AujMtFU0cz9QFAIzjcDbfpm0BdBjuHU3Z1I92GQhvlPt1QdEzn6Y7BwC6xV0eceIvZ7wKvxBXLcVOvANZNfDJ3Hnf746pskE-ACA5VuE1T2qYtRoGwR5TYiJ5_ukxmVbyKlhrq3SaIKsUONZUAInJHkS1mpPZwjMIqsBaie8IJhTYzGdJxTI_x6Xi3uqso_9UQOVN0sBHtYGamy0lJp9t4bAOXL4VTj4b5XQxGKpQ
+
+{
+  "tableIdVoList": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ]
+}
+
