@@ -13,6 +13,7 @@ import java.util.List;
  *
  *
  * <h1>主键 ids</h1>
+ * @author manurodgers
  */
 @ApiModel(description = "通用 id 对象")
 @Data

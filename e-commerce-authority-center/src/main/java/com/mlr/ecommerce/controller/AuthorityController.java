@@ -33,6 +33,7 @@ public class AuthorityController {
   @IgnoreResponseAdvice
   @PostMapping("/token")
   public JwtTokenVo login(@RequestBody UsernameAndPassword usernameAndPassword) throws Exception {
+    log.info("hi");
     log.info("request to get token with param: [{}]", JSON.toJSONString(usernameAndPassword));
     return JwtTokenVo.builder()
         .token(

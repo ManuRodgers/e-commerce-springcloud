@@ -7,6 +7,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author manurodgers
+ */
 @ApiModel(description = "数据表记录主键对象")
 @Data
 @AllArgsConstructor

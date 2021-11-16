@@ -1,0 +1,13 @@
+package com.mlr.ecommerce.constant;
+
+/**
+ *
+ *
+ * <h1>商品常量信息</h1>
+ *
+ * @author manurodgers
+ */
+public class GoodsConstant {
+  /** redis key */
+  public static final String ECOMMERCE_GOODS_DICT_KEY = "ecommerce:goods:dict:20211012";
+}

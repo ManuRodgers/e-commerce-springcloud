@@ -14,8 +14,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>e-commerce-service-config</module>
         <module>e-commerce-account-service</module>
+        <module>e-commerce-goods-service</module>
+        <module>e-commerce-service-config</module>
         <module>e-commerce-service-sdk</module>
     </modules>
     <!-- 模块名及描述信息 -->
@@ -27,18 +28,18 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
+            <version>3.0.0</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
+            <version>3.0.0</version>
         </dependency>
         <!-- 美化 swagger -->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>swagger-bootstrap-ui</artifactId>
-            <version>1.9.3</version>
+            <version>1.9.6</version>
         </dependency>
     </dependencies>
 </project>

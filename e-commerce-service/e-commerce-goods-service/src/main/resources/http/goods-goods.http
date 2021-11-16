@@ -1,0 +1,50 @@
+### getGoodsVoListByTableIdVoList
+POST http://127.0.0.1:9001/mlr/ecommerce-goods-service/goods/goods-info
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJ1c2VySWRcIjoxMixcInVzZXJuYW1lXCI6XCJtYW51QGltb29jLmNvbVwifSIsImp0aSI6ImViMGU1YmFiLWJjYmUtNDRkOC1hNTlmLTg1YTY3YThiY2FmMiIsImV4cCI6MTYzNzA2NzYwMH0.RMYNqQT-weNIRZM53QtcEA22dugcMvEYetMbOhTCw60O5dgMXftqT1ca3uTjyJiyVfL-5mYwnYx7iSQtFKKNUPKFyheo6bzYzxrU-gMqlrndRW1jr6_6mjtrVnn1YMJz8FJ4LBBCDY1ihkwo73RDmwIlbb7d0mSqgWZNasSRfM08RqxovpXu5reP1Hi94daOWWCSoG8nmllTNIg6GA8uVAI7h53eLXtw86UWaSN4YWJfBnTZB805QxmSBkBYzKun9J1H79d8ZHrUcFOBLQFS0u6yTN5N46_1puV9Oo1SSUtLc1CBTLi-EQVQx1FIIU3Ah6BpOUHNrsjDCrg5HImtEA
+
+{
+  "tableIdVoList": [
+    {
+      "id": 1
+    }
+  ]
+}
+
+
+
+### getSimpleGoodsInfoByPage
+GET http://127.0.0.1:9001/mlr/ecommerce-goods-service/goods/page-simple-goods-info
+Accept: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJ1c2VySWRcIjoxMixcInVzZXJuYW1lXCI6XCJtYW51QGltb29jLmNvbVwifSIsImp0aSI6ImViMGU1YmFiLWJjYmUtNDRkOC1hNTlmLTg1YTY3YThiY2FmMiIsImV4cCI6MTYzNzA2NzYwMH0.RMYNqQT-weNIRZM53QtcEA22dugcMvEYetMbOhTCw60O5dgMXftqT1ca3uTjyJiyVfL-5mYwnYx7iSQtFKKNUPKFyheo6bzYzxrU-gMqlrndRW1jr6_6mjtrVnn1YMJz8FJ4LBBCDY1ihkwo73RDmwIlbb7d0mSqgWZNasSRfM08RqxovpXu5reP1Hi94daOWWCSoG8nmllTNIg6GA8uVAI7h53eLXtw86UWaSN4YWJfBnTZB805QxmSBkBYzKun9J1H79d8ZHrUcFOBLQFS0u6yTN5N46_1puV9Oo1SSUtLc1CBTLi-EQVQx1FIIU3Ah6BpOUHNrsjDCrg5HImtEA
+
+### /simple-goods-info
+POST http://127.0.0.1:9001/mlr/ecommerce-goods-service/goods/simple-goods-info
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJ1c2VySWRcIjoxMixcInVzZXJuYW1lXCI6XCJtYW51QGltb29jLmNvbVwifSIsImp0aSI6Ijc4NDdkYTY3LWYwZTMtNDU4OC04MWI3LTc5MmFjY2ZhMDdjZSIsImV4cCI6MTYzNzA2NzYwMH0.c8ORyuJ_PvwTsV7GbbsulzF_ScR0PKJLDVsvOBXVTj-mWlFmeOO3sCdnCGMFSRww0xDtJvtuFSLDTL80HGoNhPfRfeRxOEfPxKzyhtefOnHemT8t4vTMXieCNoD5vq5jv4FNFuZzBsL6MML3T9DYxcGCDw4qt6E12NpTw09Se51pY4bAu5f3eZL2Hx_Jv9raB8p6oKBSbPLDw51nYVmEdZu2sIIE9UQ-Xt0-XGLIVHffvEMbtc0VSH-brhvSQtqeCooQrhQCYievQbVFfCEASIhio5z0ZQYwr4MU-QIFTX1wuzsIvd60w-C08QXEBpf0PFqdmSMUNy50hNvTERa1pQ
+
+{
+  "tableIdVoList": [
+    {
+      "id": 1
+    }
+  ]
+}
+
+### /simple-goods-info
+PUT http://127.0.0.1:9001/mlr/ecommerce-goods-service/goods/deduct-goods-inventory
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJ1c2VySWRcIjoxMixcInVzZXJuYW1lXCI6XCJtYW51QGltb29jLmNvbVwifSIsImp0aSI6Ijc4NDdkYTY3LWYwZTMtNDU4OC04MWI3LTc5MmFjY2ZhMDdjZSIsImV4cCI6MTYzNzA2NzYwMH0.c8ORyuJ_PvwTsV7GbbsulzF_ScR0PKJLDVsvOBXVTj-mWlFmeOO3sCdnCGMFSRww0xDtJvtuFSLDTL80HGoNhPfRfeRxOEfPxKzyhtefOnHemT8t4vTMXieCNoD5vq5jv4FNFuZzBsL6MML3T9DYxcGCDw4qt6E12NpTw09Se51pY4bAu5f3eZL2Hx_Jv9raB8p6oKBSbPLDw51nYVmEdZu2sIIE9UQ-Xt0-XGLIVHffvEMbtc0VSH-brhvSQtqeCooQrhQCYievQbVFfCEASIhio5z0ZQYwr4MU-QIFTX1wuzsIvd60w-C08QXEBpf0PFqdmSMUNy50hNvTERa1pQ
+
+[
+  {
+    "goodsId": 1,
+    "count": 100
+  },
+  {
+    "goodsId": 2,
+    "count": 200
+  }
+]
+
+

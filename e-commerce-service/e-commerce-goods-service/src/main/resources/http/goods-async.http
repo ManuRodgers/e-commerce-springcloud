@@ -1,0 +1,52 @@
+### 导入商品
+POST http://127.0.0.1:9001/mlr/ecommerce-goods-service/async-goods/import-goods
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJ1c2VySWRcIjoxMixcInVzZXJuYW1lXCI6XCJtYW51QGltb29jLmNvbVwifSIsImp0aSI6IjQ4ZGJkNWQ5LTEzNWUtNGQ2OS04MzU3LTk4ZGJmZDQ0YzMxOSIsImV4cCI6MTYzNjg5NDgwMH0.CHY8SzrVZlrryzKhdVvjxZFSN-bV1E5NOiLYqipCzkLrHAVVSBpXKF3i5S95xzctkd7c14kLzimSxPOOoI8hNSqkIxf3iQmlRDwNfGKmeCneUweeKzHqCIIwDVxSeUkadM-Ru_oy0esg7tlOv2uTrwEKMuxLY_GxP21alw9WdPaK5-ql3g98hIV4JYwq_-BpntPtJQic1itiGWq4BDxDkJbQ3Cmzr1VyuAMHGkMMMdFTuwgbqBoAh3Y0-be2qyLBmzHQGB2Yek-bWkNlI5wQGt4LfHyQ-Dkt4qkdsJ7euRzoEp95LdosB168XjTXTcJhpR5P9Y-j8HGiqdkSgy1T5w
+
+[
+  {
+    "goodsCategory": "10001",
+    "brandCategory": "20001",
+    "goodsName": "iphone 11",
+    "goodsPic": "",
+    "goodsDescription": "苹果手机",
+    "price": 100000,
+    "supply": 2000000,
+    "goodsProperty": {
+      "size": "12cm * 6.5cm",
+      "color": "绿色",
+      "material": "金属机身",
+      "pattern": "纯色"
+    }
+  },
+  {
+    "goodsCategory": "10001",
+    "brandCategory": "20001",
+    "goodsName": "iphone 12",
+    "goodsPic": "",
+    "goodsDescription": "苹果手机",
+    "price": 150000,
+    "supply": 2000000,
+    "goodsProperty": {
+      "size": "12cm * 6.5cm",
+      "color": "绿色",
+      "material": "金属机身",
+      "pattern": "纯色"
+    }
+  },
+  {
+    "goodsCategory": "10001",
+    "brandCategory": "20001",
+    "goodsName": "iphone 13",
+    "goodsPic": "",
+    "goodsDescription": "苹果手机",
+    "price": 160000,
+    "supply": 2000000,
+    "goodsProperty": {
+      "size": "12cm * 6.5cm",
+      "color": "绿色",
+      "material": "金属机身",
+      "pattern": "纯色"
+    }
+  }
+]

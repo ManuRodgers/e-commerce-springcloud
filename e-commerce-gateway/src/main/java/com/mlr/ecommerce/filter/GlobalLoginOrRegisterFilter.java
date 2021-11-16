@@ -8,7 +8,6 @@ import com.mlr.ecommerce.vo.JwtTokenVo;
 import com.mlr.ecommerce.vo.LoginUserInfo;
 import com.mlr.ecommerce.vo.UsernameAndPassword;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -41,9 +40,15 @@ import java.util.concurrent.atomic.AtomicReference;
 @Slf4j
 public class GlobalLoginOrRegisterFilter implements GlobalFilter, Ordered {
   /** 注册中心客户端, 可以从注册中心中获取服务实例信息 */
-  @Autowired private LoadBalancerClient loadBalancerClient;
+  private final LoadBalancerClient loadBalancerClient;
 
-  @Autowired private RestTemplate restTemplate;
+  private final RestTemplate restTemplate;
+
+  public GlobalLoginOrRegisterFilter(
+      LoadBalancerClient loadBalancerClient, RestTemplate restTemplate) {
+    this.loadBalancerClient = loadBalancerClient;
+    this.restTemplate = restTemplate;
+  }
 
   @Override
   public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
